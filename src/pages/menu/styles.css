@@ -1,0 +1,9 @@
+.menu-contact {
+    background-image: linear-gradient(rgba(19, 13, 1, 0.7), rgba(19, 13, 1, 0.7)), url("https://ofefoods.com/storage/2021/07/afang-soup.jpeg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    border-bottom-left-radius: 50% 150px;
+    border-bottom-right-radius: 50% 150px;
+    padding-bottom: 50px;
+}

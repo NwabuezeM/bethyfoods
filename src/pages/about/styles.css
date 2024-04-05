@@ -1,0 +1,32 @@
+.hero-about {
+    background-image: linear-gradient(rgba(19, 13, 1, 0.7), rgba(19, 13, 1, 0.7)), url("https://media.istockphoto.com/id/1179808152/photo/cool-vacations.jpg?s=612x612&w=0&k=20&c=agrB6nvpk6h1jM6VlOWNHQEyHo4TnqeZtV8PCttmNnQ=");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    border-bottom-left-radius: 50% 150px;
+    border-bottom-right-radius: 50% 150px;
+    padding-bottom: 50px;
+}
+
+.core-value-and-policy {
+    background-image: linear-gradient(rgba(56, 54, 54, 0.7), rgba(0, 0, 0, 0.8)), url("https://media.istockphoto.com/id/2083481352/photo/young-couple-eating-belgian-waffles-and-drinking-champagne-in-a-pub.jpg?s=612x612&w=0&k=20&c=m1F2LqUWFKuoQPbQlIjIbdB5rWkY68W9fz4414lKNr8=");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-about {
+        border-bottom-left-radius: 50% 100px;
+        border-bottom-right-radius: 50% 100px;
+        padding-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hero-about {
+        border-bottom-left-radius: 50% 50px;
+        border-bottom-right-radius: 50% 50px;
+        padding-bottom: 50px;
+    }
+}

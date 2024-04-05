@@ -1,0 +1,3 @@
+.product-card:hover .hidden {
+    display: block;
+}

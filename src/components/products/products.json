@@ -1,0 +1,296 @@
+[
+    {
+        "id": 1,
+        "title": "Egusi Soup",
+        "image": "https://www.pointoneafricancuisine.com/wp-content/uploads/2021/05/Egusi-675x506.jpeg",
+        "description": "Traditional Nigerian egusi soup, prepared with goat meat and pomo (cow skin), offers a flavorful and hearty dish loved by many.",
+        "ratings": 5,
+        "price": 1800,
+        "category": "soup",
+        "featured": true
+    },
+    {
+        "id": 2,
+        "title": "Afang Soup",
+        "image": "https://ofefoods.com/storage/2021/07/afang-soup.jpeg",
+        "description": "Afang soup, a Nigerian delicacy, made with tender beef or goat meat and pomo (cow skin), delivers a rich and satisfying flavor experience.",
+        "ratings": 5,
+        "price": 2000,
+        "category": "soup"
+    },
+    {
+        "id": 3,
+        "title": "Gbegiri Soup",
+        "image": "https://www.myactivekitchen.com/wp-content/uploads/2015/03/abula-gbegiri-recipe-img-2.jpg",
+        "description": "Gbegiri, a Yoruba soup, is a savory delicacy made primarily from beans and often served alongside other Nigerian dishes like ewedu and amala.",
+        "ratings": 5,
+        "price": 1600,
+        "category": "soup"
+    },
+    {
+        "id": 4,
+        "title": "Efo Riro Soup",
+        "image": "https://www.myactivekitchen.com/wp-content/uploads/2015/07/how-to-make-efo-riro-recipe-img_20-500x500.jpg",
+        "description": "Efo Riro, a Yoruba soup, is a delightful Nigerian dish featuring a vibrant blend of spinach, assorted meats like beef or goat meat, and flavorful spices, creating a delicious and nutritious meal.",
+        "ratings": 4.5,
+        "price": 1800,
+        "category": "soup"
+    },
+    {
+        "id": 5,
+        "title": "Nsala Soup",
+        "image": "https://www.royacshop.com/wp-content/uploads/2019/08/Nsala-Soup.jpg",
+        "description": "Nsala soup, a Nigerian delicacy also known as 'white soup,' is a flavorful dish made with assorted meats such as goat meat or chicken, yam, and aromatic spices, resulting in a rich and comforting culinary experience.",
+        "ratings": 4.5,
+        "price": 1500,
+        "category": "soup"
+    },
+    {
+        "id": 6,
+        "title": "Moringa Soup",
+        "image": "https://img-global.cpcdn.com/recipes/b2718cf5531c0a1d/680x482cq70/moringa-soup-recipe-main-photo.jpg",
+        "description": "Moringa soup, a traditional dish from the Hausa culture, incorporates nutritious moringa leaves, along with other ingredients like meat, fish, and spices, creating a wholesome and flavorful soup enjoyed in Nigerian cuisine.",
+        "ratings": 5,
+        "price": 1600,
+        "category": "soup"
+    },
+    {
+        "id": 7,
+        "title": "Ede Soup (Ofe Ede)",
+        "image": "https://sisijemimah.com/wp-content/uploads/2016/04/bitter-leaf-soup-12.jpg",
+        "description": "Ede Soup (with bitter leaf) is a traditional Nigerian dish that combines cocoyam (ede) with bitter leaf, creating a unique and flavorful soup enjoyed across various Nigerian communities for its rich taste and cultural significance.",
+        "ratings": 5,
+        "price": 1800,
+        "category": "soup"
+    },
+    {
+        "id": 8,
+        "title": "Okra Soup",
+        "image": "https://allnigerianfoods.com/wp-content/uploads/okro_soup_recipe.jpg",
+        "description": "Okra soup, a popular dish in many Nigerian households, features fresh okra, meat or seafood, and a blend of traditional spices, resulting in a deliciously thick and flavorful soup that pairs perfectly with eba or fufu.",
+        "ratings": 4.5,
+        "price": 1600,
+        "category": "soup"
+    },
+    {
+        "id": 9,
+        "title": "Jolof Rice",
+        "image": "https://www.lubzonline.com/wp-content/uploads/2021/02/E10DB4E6-4731-4829-A5F1-B36B0AC88C98-scaled.jpeg",
+        "description": "Jolof rice is a beloved West African dish made with rice, tomatoes, onions, and a variety of spices, creating a flavorful and vibrant one-pot meal that is enjoyed across the region and beyond.",
+        "ratings": 5,
+        "price": 2000,
+        "category": "rice"
+    },
+    {
+        "id": 10,
+        "title": "Fried Rice & Chicken",
+        "image": "https://img-global.cpcdn.com/recipes/5da646cc1c73a947/680x482cq70/7-tips-to-cook-the-perfect-fried-rice-recipe-main-photo.webp",
+        "description": "Fried rice with chicken is a delectable dish featuring seasoned rice stir-fried with vegetables, eggs, and succulent pieces of chicken, delivering a delightful fusion of flavors and textures in every bite.",
+        "ratings": 5,
+        "price": 1900,
+        "category": "rice",
+        "featured": true
+    },
+    {
+        "id": 11,
+        "title": "White Rice & Stew",
+        "image": "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/139529.jpg",
+        "description": "White rice paired with beef stew is a classic combination that offers simplicity and hearty satisfaction. The tender beef stew, rich in savory flavors, complements the fluffy white rice perfectly, creating a comforting and delicious meal enjoyed by many.",
+        "ratings": 5,
+        "price": 1700,
+        "category": "rice"
+    },
+    {
+        "id": 12,
+        "title": "Chicken Stew",
+        "image": "https://bettyfood.vercel.app/images/chicken%20stew.jpg",
+        "description": "Chicken stew is a savory dish made with tender pieces of chicken simmered in a flavorful tomato-based sauce, often seasoned with herbs and spices. It's a comforting and versatile meal that pairs well with rice, potatoes, or bread, offering a delicious dining experience for chicken lovers.",
+        "ratings": 4,
+        "price": 1700,
+        "category": "rice"
+    },
+    {
+        "id": 13,
+        "title": "Banga Stew",
+        "image": "https://cdn.businessday.ng/2019/11/ofe-akwu.png",
+        "description": "Banga stew, also known as Ofe Akwu, is a traditional Nigerian dish made from palm fruit extract. It's typically cooked with assorted meats and fish, along with traditional spices, resulting in a rich, aromatic stew that is enjoyed with rice, starches, or yam.",
+        "ratings": 5,
+        "price": 1800,
+        "category": "rice"
+    },
+    {
+        "id": 14,
+        "title": "Coconut Rice",
+        "image": "https://www.foodiesonline.com.ng/mobileapp/wp-content/uploads/2019/10/Coconut-rice-600.jpg",
+        "description": "Coconut rice is a flavorful dish made by cooking rice in coconut milk and water, resulting in a subtly sweet and creamy texture. Often paired with a variety of meats, vegetables, or seafood, coconut rice offers a delicious tropical twist to traditional rice dishes, enjoyed in many cuisines worldwide.",
+        "ratings": 4.8,
+        "price": 1800,
+        "category": "rice"
+    },
+    {
+        "id": 15,
+        "title": "Goat Meat Pepper Soup",
+        "image": "https://www.bellanaija.com/wp-content/uploads/2021/01/Sisi-Jemimah-Pepper-Soup.jpg",
+        "description": "Goat meat pepper soup is a spicy and flavorful Nigerian dish made by simmering tender pieces of goat meat in a rich broth infused with aromatic spices like peppers, onions, and herbs. It's a warming and comforting soup enjoyed for its bold flavors and tender meat, often served as a starter or main course in Nigerian cuisine.",
+        "ratings": 4.8,
+        "price": 1800,
+        "category": "pepper soup"
+    },
+    {
+        "id": 16,
+        "title": "Catfish Pepper Soup",
+        "image": "https://foodeely.com/wp-content/uploads/2023/08/Cat-Fish-Pepper-Soup-.jpg",
+        "description": "Catfish pepper soup is a delicious Nigerian dish featuring fresh catfish cooked in a flavorful broth seasoned with aromatic spices such as peppers, onions, and traditional herbs. Known for its bold flavors and tender fish, catfish pepper soup is a popular choice for warming up on chilly days or enjoying as a comforting meal anytime.",
+        "ratings": 4.5,
+        "price": 2000,
+        "category": "pepper soup"
+    },
+    {
+        "id": 17,
+        "title": "Cow Meat Pepper Soup",
+        "image": "https://www.mydiasporakitchen.com/wp-content/uploads/2018/01/img_2618.jpg",
+        "description": "Cow meat pepper soup is a hearty Nigerian dish made by simmering tender pieces of cow meat in a flavorful broth infused with aromatic spices like peppers, onions, and traditional herbs. Known for its bold flavors and tender meat, cow meat pepper soup is a popular choice for warming up on chilly days or enjoying as a comforting meal anytime.",
+        "ratings": 5,
+        "price": 1600,
+        "category": "pepper soup",
+        "featured": true
+    },
+    {
+        "id": 18,
+        "title": "Chicken Pepper Soup",
+        "image": "https://img-global.cpcdn.com/recipes/936536b484e7ed6c/1200x630cq70/photo.jpg",
+        "description": "Chicken pepper soup is a flavorful Nigerian dish made by simmering tender chicken pieces in a spicy broth infused with aromatic spices like peppers, onions, and traditional herbs. Known for its bold flavors and comforting warmth, chicken pepper soup is a popular choice for soothing colds or simply enjoying as a satisfying meal.",
+        "ratings": 5,
+        "price": 1700,
+        "category": "pepper soup"
+    },
+    {
+        "id": 19,
+        "title": "Meat Pie",
+        "image": "https://i.ytimg.com/vi/ZXM0ZZM9Mjs/maxresdefault.jpg",
+        "description": "Meat pie is a savory pastry filled with a delicious mixture of seasoned ground meat, vegetables, and sometimes potatoes, enclosed in a flaky crust. It's a popular snack or meal enjoyed in various cultures worldwide for its hearty flavors and portable convenience.",
+        "ratings": 5,
+        "price": 900,
+        "category": "snacks",
+        "featured": true
+    },
+    {
+        "id": 20,
+        "title": "Egg Roll",
+        "image": "https://ounjealadun.files.wordpress.com/2020/04/20200416_184243-1.jpg?w=1108&h=737&crop=1",
+        "description": "An egg roll is a savory snack made by wrapping a seasoned mixture of eggs, vegetables, and sometimes meat in a thin pastry wrapper before frying until golden brown. It's a popular treat enjoyed in many countries for its crispy exterior and flavorful filling.",
+        "ratings": 5,
+        "price": 700,
+        "category": "snacks"
+    },
+    {
+        "id": 21,
+        "title": "Fish Pie",
+        "image": "https://img-global.cpcdn.com/recipes/12cb6d04d4b53d4a/680x482cq70/baked-fish-pie-recipe-main-photo.webp",
+        "description": "Fish pie is a delectable dish consisting of flaky pastry encasing a savory filling of fish, usually salmon, cod, or haddock, combined with creamy sauce and sometimes vegetables. Baked to golden perfection, fish pie offers a delightful blend of flavors and textures, making it a favorite comfort food enjoyed by many.",
+        "ratings": 4.5,
+        "price": 700,
+        "category": "snacks"
+    },
+    {
+        "id": 22,
+        "title": "Chin Chin",
+        "image": "https://www.seriouseats.com/thmb/djGjGVNbXyMb6r_Rm8qfj4yctMM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/20220822-ChinChinMaureen-Celestine-20_1-00ad72b42c61430cb47dc958671a395f.JPG",
+        "description": "Chin chin is a crunchy and mildly sweet Nigerian snack made from a dough of flour, sugar, milk, and butter, flavored with nutmeg or vanilla. The dough is cut into small pieces, then fried until golden brown, resulting in crispy bites that are perfect for snacking and sharing on festive occasions.",
+        "ratings": 4.8,
+        "price": 1000,
+        "category": "snacks"
+    },
+    {
+        "id": 23,
+        "title": "Peanut",
+        "image": "https://fullofplants.com/wp-content/uploads/2021/09/Bacon-Flavored-Coated-Peanuts-vegan-crispy-snack-thumb-3.jpg",
+        "description": "Peanuts, also known as groundnuts, are nutritious legumes that grow underground. They are rich in protein, healthy fats, vitamins, and minerals. Peanuts can be enjoyed roasted, boiled, or ground into peanut butter, making them a versatile and delicious snack enjoyed around the world.",
+        "ratings": 4.8,
+        "price": 500,
+        "category": "snacks"
+    },
+    {
+        "id": 24,
+        "title": "Boli(roasted plantain) & Grilled Fish",
+        "image": "https://guccilounge.net/wp/wp-content/uploads/2020/11/boli6.jpg",
+        "description": "Boli, or roasted plantain, is a popular Nigerian street food made by grilling ripe plantains until they are caramelized and tender. It is often served with grilled fish, which is seasoned and cooked over an open flame until it is smoky and flavorful. This delicious combination of boli and grilled fish offers a satisfying and wholesome meal enjoyed by many in Nigeria and beyond.",
+        "ratings": 4.8,
+        "price": 1200,
+        "category": "snacks"
+    },
+    {
+        "id": 25,
+        "title": "Boli(roasted plantain) & Grilled Fish",
+        "image": "https://guccilounge.net/wp/wp-content/uploads/2020/11/boli6.jpg",
+        "description": "Boli, or roasted plantain, is a popular Nigerian street food made by grilling ripe plantains until they are caramelized and tender. It is often served with grilled fish, which is seasoned and cooked over an open flame until it is smoky and flavorful. This delicious combination of boli and grilled fish offers a satisfying and wholesome meal enjoyed by many in Nigeria and beyond.",
+        "ratings": 4.8,
+        "price": 1200,
+        "category": "others",
+        "featured": true
+    },
+    {
+        "id": 26,
+        "title": "Pepperoni Pizza",
+        "image": "https://www.simplyrecipes.com/thmb/pjYMLcsKHkr8D8tYixmaFNxppPw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2019__09__easy-pepperoni-pizza-lead-3-8f256746d649404baa36a44d271329bc.jpg",
+        "description": "Pepperoni pizza is a classic Italian-American dish featuring a thin or thick crust topped with tomato sauce, melted cheese, and slices of spicy pepperoni sausage. It's a popular choice for pizza lovers worldwide, known for its savory flavors and satisfying combination of cheese and meat.",
+        "ratings": 5,
+        "price": 2000,
+        "category": "others"
+    },
+    {
+        "id": 27,
+        "title": "Chicken Sharwama",
+        "image": "https://www.bylena.com/images/uploaded/1920x_Shaorma-de-casa-336.jpg",
+        "description": "Chicken shawarma is a Middle Eastern-inspired dish made with thinly sliced marinated chicken, wrapped in a soft pita or flatbread along with vegetables, garlic sauce, and sometimes pickles or tahini. It's a flavorful and satisfying street food enjoyed for its tender, spiced chicken and array of tasty toppings.",
+        "ratings": 5,
+        "price": 2000,
+        "category": "others"
+    },
+    {
+        "id": 28,
+        "title": "White Yam & Egg Sauce",
+        "image": "https://allnigerianfoods.com/wp-content/uploads/egg-sauce.png",
+        "description": "White yam and egg sauce is a delicious Nigerian dish consisting of boiled or roasted white yam served with a savory sauce made from scrambled eggs, tomatoes, onions, peppers, and various seasonings. It's a hearty and satisfying meal enjoyed for its rich flavors and nutritious ingredients, often served as a breakfast or lunch option in Nigerian cuisine.",
+        "ratings": 5,
+        "price": 1900,
+        "category": "others"
+    },
+    {
+        "id": 29,
+        "title": "Vegetable Porridge Yam",
+        "image": "https://www.mydiasporakitchen.com/wp-content/uploads/2017/07/Mydiasporakitchen-3.jpg-1-1024x1024.jpeg",
+        "description": "Vegetable yam porridge is a hearty Nigerian dish made by simmering chunks of yam in a flavorful broth with a variety of vegetables such as spinach, kale, or ugu leaves, along with onions, tomatoes, and spices. It's a nutritious and satisfying meal enjoyed for its rich flavors and comforting texture, often served as a main course in Nigerian households.",
+        "ratings": 5,
+        "price": 1400,
+        "category": "others"
+    },
+    {
+        "id": 30,
+        "title": "Beans & Fried Plantain",
+        "image": "https://img-global.cpcdn.com/recipes/d2d38dd16f4ad79d/680x482cq70/porridge-beans-and-fried-plantain-recipe-main-photo.webp",
+        "description": "Beans and fried plantain is a classic Nigerian dish featuring cooked beans seasoned with onions, peppers, and spices, served alongside ripe plantains that are sliced and fried until golden brown. This combination offers a delicious contrast of textures and flavors, making it a popular and satisfying meal enjoyed across Nigeria.",
+        "ratings": 5,
+        "price": 1600,
+        "category": "others"
+    },
+    {
+        "id": 31,
+        "title": "Beans & Yam Porridge",
+        "image": "https://www.shoprite.co.bw/content/dam/ShopriteNigeria/Recipes%202016/beans-and-yam-pottage/Beans-Yam-Pottage-ImageCard-1020x315.jpg",
+        "description": "Beans and yam porridge is a wholesome Nigerian dish made by cooking beans and yam together in a flavorful broth. Seasoned with onions, tomatoes, peppers, and various spices, this hearty porridge combines the nutty taste of beans with the soft texture of yam, creating a delicious and nutritious meal commonly enjoyed in Nigerian households.",
+        "ratings": 4.5,
+        "price": 1400,
+        "category": "others"
+    },
+    {
+        "id": 32,
+        "title": "Five Alive Juice (Big)",
+        "image": "https://mamacassng.com/wp-content/uploads/2020/10/five.jpg",
+        "description": "Five Alive Juice is a delightfully cool drink made from a carefully balanced combination of five colorful fruits. Servings are large and tasty, providing a satisfying and energizing experience. Five Alive Juice is the perfect beverage for any time of day, as it may relieve your thirst and provide you more energy.",
+        "ratings": 4.5,
+        "price": 1000,
+        "category": "drinks",
+        "featured": true
+    }
+]

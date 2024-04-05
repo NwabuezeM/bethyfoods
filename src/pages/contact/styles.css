@@ -1,0 +1,9 @@
+.hero-contact {
+    background-image: linear-gradient(rgba(19, 13, 1, 0.7), rgba(19, 13, 1, 0.7)), url("https://media.istockphoto.com/id/1444001932/photo/business-lunch.webp?b=1&s=170667a&w=0&k=20&c=duL_NkdCRr4ffJRcKEqvuIPv7VMFgo04YKDeBnaH6u8=");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    border-bottom-left-radius: 50% 150px;
+    border-bottom-right-radius: 50% 150px;
+    padding-bottom: 50px;
+}
