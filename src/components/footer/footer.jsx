@@ -14,7 +14,7 @@ function Footer() {
     <footer className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-8 py-24 lg:py-40 text-white min-h-[80vh] lg:min-h-screen">
       <div className="introduction text-center lg:text-left">
         <h3 className="z-50">BethyFoods</h3>
-        <p>Experience Naija Delicacies: We bring mouthwatering Nigerian foods right to your house. Many Nigerians as well as foreigners trust our food. Additionally, we provide soft drinks for your ultimate refreshment.
+        <p>Experience Nigerian Delicacies: We bring mouthwatering Nigerian foods right to your house. Many Nigerians as well as foreigners trust our food. Additionally, we provide soft drinks for your ultimate refreshment.
         </p>
       </div>
 
