@@ -17,7 +17,6 @@ function Drinks() {
             const drinks = productData.filter(drink => drink.category === 'drinks');
             setDrinks(drinks);
             setLoading(false);
-            console.log(drinks);
         } catch (error) {
             setLoading(false);
             setError(error);

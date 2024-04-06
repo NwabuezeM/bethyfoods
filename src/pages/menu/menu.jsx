@@ -1,10 +1,22 @@
-import FeaturedMenu from './featuredMenu'
-import MenuHeroSection from './menuHeroSection'
-import MenuList from './menuList/menuList'
-import ProductFilter from './productFilter'
-import './styles.css'
+import React, { useState } from 'react';
+import FeaturedMenu from './featuredMenu';
+import MenuHeroSection from './menuHeroSection';
+import MenuList from './menuList/menuList';
+import productData from '../../components/products/products.json';
+import ProductFilter from './productFilter';
+import './styles.css';
+import ProductCard from '../../components/products/productCard';
 
 function Menu() {
+  const [filteredProducts, setFilteredProducts] = useState(productData);
+  const [startValue, setStartValue] = useState(500);
+  const [endValue, setEndValue] = useState(4000);
+
+  const filterByPrice = () => {
+    const filteredProduct = productData.filter(product => product.price >= startValue && product.price <= endValue);
+    setFilteredProducts(filteredProduct);
+  };
+
   return (
     <main>
       <section>
@@ -13,12 +25,12 @@ function Menu() {
       <section>
         <FeaturedMenu />
       </section>
-      <div className='flex gap-8 px-20'>
-        <ProductFilter />
+      <section>
         <MenuList />
-      </div>
+      </section>
+
     </main>
-  )
+  );
 }
 
-export default Menu
+export default Menu;

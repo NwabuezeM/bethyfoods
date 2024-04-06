@@ -146,8 +146,7 @@ function ContactForm() {
                     <textarea
                         name="message"
                         id="message"
-                        cols="30"
-                        rows="10"
+                        placeholder='Your message...'
                         className={`text-gray-700 placeholder:text-gray-700 p-6 bg-[#ddd7d7] rounded-lg text-3xl outline-none ${errors.message && 'border-2'} focus:border-2 focus:${errors.message ? 'border-red-600' : 'border-green-700'} ${errors.message && 'border-red-600'} h-[150px]`}
                         value={formData.message}
                         onChange={handleInputChange}

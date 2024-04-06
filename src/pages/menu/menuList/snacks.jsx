@@ -15,7 +15,6 @@ function Snacks() {
             const snacks = productData.filter(snack => snack.category === 'snacks');
             setSnacks(snacks);
             setLoading(false);
-            console.log(snacks);
         } catch (error) {
             setLoading(false);
             setError(error);

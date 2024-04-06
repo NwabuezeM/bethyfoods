@@ -16,7 +16,6 @@ function Rice() {
             const rice = productData.filter(rice => rice.category === 'rice');
             setRice(rice);
             setLoading(false);
-            console.log(rice);
         } catch (error) {
             setLoading(false);
             setError(error);

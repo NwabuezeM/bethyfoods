@@ -16,7 +16,6 @@ function PepperSoup() {
             const pepperSoups = productData.filter(pepperSoup => pepperSoup.category === 'pepper soup');
             setPepperSoups(pepperSoups);
             setLoading(false);
-            console.log(pepperSoups);
         } catch (error) {
             setLoading(false);
             setError(error);

@@ -1,9 +1,19 @@
 import { useState } from 'react'
 import { FcGoogle } from 'react-icons/fc'
 import { FaEnvelope, FaEye, FaEyeSlash, FaFacebook, FaLock, FaPhone, FaUser } from 'react-icons/fa'
+import { db, auth } from '../../../firebase'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { Timestamp, doc, serverTimestamp, setDoc } from 'firebase/firestore'
+import { useDispatch } from 'react-redux'
+import { setUser } from '../../components/products/store/userSlice'
+import { useNavigate } from 'react-router-dom'
 
 
 function Signup() {
+    const dispatch = useDispatch()
+    const navigate = useNavigate();
+    const [submissionError, setSubmissionError] = useState('');
+
     const [inputData, setInputData] = useState({
         fullName: '',
         username: '',
@@ -90,23 +100,48 @@ function Signup() {
         return isValid;
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (formValidation()) {
-            console.log('Form submitted:', inputData);
-            setInputData({
-                fullName: '',
-                username: '',
-                email: '',
-                number: '',
-                password: '',
-                confirmPassword: ''
-            });
-
+            try {
+                const userCredential = await createUserWithEmailAndPassword(auth, inputData.email, inputData.password);
+                const user = userCredential.user;
+                dispatch(setUser({ id: user.uid, email: user.email }));
+                navigate('/profile');
+                setSubmissionError('');
+                setInputData({
+                    email: '',
+                    password: '',
+                });
+    
+                // Create a new object with updated user data
+                const userData = {
+                    fullName: inputData.fullName,
+                    username: inputData.username,
+                    email: inputData.email,
+                    number: inputData.number,
+                    Timestamp: serverTimestamp()
+                };
+    
+                await setDoc(doc(db, 'users', user.uid), userData);
+    
+                setInputData({
+                    fullName: '',
+                    username: '',
+                    email: '',
+                    number: '',
+                    password: '',
+                    confirmPassword: ''
+                });
+            } catch (error) {
+                console.log(error);
+            }
         } else {
             console.log('Form has errors. Please fix them.');
         }
     };
+    
+
 
 
     return (
@@ -120,11 +155,11 @@ function Signup() {
                         value={inputData.fullName}
                         placeholder="Enter your full name"
                         onChange={handleInputChange}
-                        className={`py-4 px-20 outline-none border-2 ${errors.fullName ? 'border-red-500' : 'border-gray-300'} rounded-2xl text-3xl`} />
+                        className={`py-6 px-20 outline-none border-2 ${errors.fullName ? 'border-red-500' : 'border-gray-300'} rounded-2xl text-3xl`} />
                     {
                         errors.fullName && <span className='text-red-600 text-xl mt-2 text-center'>{errors.fullName}</span>
                     }
-                    <FaUser  className='absolute left-3 top-4 text-gray-500 text-5xl' />
+                    <FaUser className='absolute left-3 top-4 text-gray-500 text-5xl' />
                 </div>
 
                 <div className="relative flex flex-col">
@@ -134,11 +169,11 @@ function Signup() {
                         value={inputData.username}
                         placeholder="Enter your username"
                         onChange={handleInputChange}
-                        className={`py-4 px-20 outline-none border-2 ${errors.username ? 'border-red-500' : 'border-gray-300'} rounded-2xl text-3xl`} />
+                        className={`py-6 px-20 outline-none border-2 ${errors.username ? 'border-red-500' : 'border-gray-300'} rounded-2xl text-3xl`} />
                     {
                         errors.username && <span className='text-red-600 text-xl mt-2 text-center'>{errors.username}</span>
                     }
-                    <FaUser  className='absolute left-3 top-4 text-gray-500 text-5xl' />
+                    <FaUser className='absolute left-3 top-4 text-gray-500 text-5xl' />
                 </div>
 
                 <div className="relative flex flex-col">
@@ -148,11 +183,11 @@ function Signup() {
                         value={inputData.number}
                         placeholder="Enter your phone number"
                         onChange={handleInputChange}
-                        className={`py-4 px-20 outline-none border-2 ${errors.number ? 'border-red-500' : 'border-gray-300'} rounded-2xl text-3xl`} />
+                        className={`py-6 px-20 outline-none border-2 ${errors.number ? 'border-red-500' : 'border-gray-300'} rounded-2xl text-3xl`} />
                     {
                         errors.number && <span className='text-red-600 text-xl mt-2 text-center'>{errors.number}</span>
                     }
-                    <FaPhone  className='absolute left-3 top-4 text-gray-500 text-5xl' />
+                    <FaPhone className='absolute left-3 top-4 text-gray-500 text-5xl' />
                 </div>
                 <div className="relative flex flex-col">
                     <input type="text"
@@ -161,11 +196,11 @@ function Signup() {
                         value={inputData.email}
                         placeholder="Enter your email"
                         onChange={handleInputChange}
-                        className={`py-4 px-20 outline-none border-2 ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-2xl text-3xl`} />
+                        className={`py-6 px-20 outline-none border-2 ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-2xl text-3xl`} />
                     {
                         errors.email && <span className='text-red-600 text-xl mt-2 text-center'>{errors.email}</span>
                     }
-                    <FaEnvelope  className='absolute left-3 top-4 text-gray-500 text-5xl' />
+                    <FaEnvelope className='absolute left-3 top-4 text-gray-500 text-5xl' />
                 </div>
 
                 <div className="relative flex flex-col">
@@ -175,18 +210,18 @@ function Signup() {
                         value={inputData.password}
                         placeholder="Enter your password"
                         onChange={handleInputChange}
-                        className={`py-4 px-20 outline-none border-2 ${errors.password ? 'border-red-500' : 'border-gray-300'} rounded-2xl text-3xl`} />
+                        className={`py-6 px-20 outline-none border-2 ${errors.password ? 'border-red-500' : 'border-gray-300'} rounded-2xl text-3xl`} />
                     <span onClick={() => setShowPassword(!showPassword)} className='cursor-pointer'>
                         {
                             showPassword ?
-                                <FaEyeSlash  className='absolute right-3 top-3 text-5xl' />
-                                : <FaEye  className='absolute right-3 top-3 text-5xl' />
+                                <FaEyeSlash className='absolute right-3 top-4 text-5xl' />
+                                : <FaEye className='absolute right-3 top-4 text-5xl' />
                         }
                     </span>
                     {
                         errors.password && <span className='text-red-600 text-xl mt-2 text-center'>{errors.password}</span>
                     }
-                    <FaLock  className='absolute left-3 top-4 text-gray-500 text-5xl' />
+                    <FaLock className='absolute left-3 top-4 text-gray-500 text-5xl' />
                 </div>
 
                 <div className="relative flex flex-col">
@@ -196,24 +231,26 @@ function Signup() {
                         value={inputData.confirmPassword}
                         placeholder="Please confirm your password"
                         onChange={handleInputChange}
-                        className={`py-4 px-20 outline-none border-2 ${errors.confirmPassword ? 'border-red-500' : 'border-gray-300'} rounded-2xl text-3xl`} />
+                        className={`py-6 px-20 outline-none border-2 ${errors.confirmPassword ? 'border-red-500' : 'border-gray-300'} rounded-2xl text-3xl`} />
                     <span onClick={() => setShowConfirmPassword(!showConfirmPassword)} className='cursor-pointer'>
                         {
                             showConfirmPassword ?
-                                <FaEyeSlash  className='absolute right-3 top-3 text-5xl' />
-                                : <FaEye  className='absolute right-3 top-3 text-5xl' />
+                                <FaEyeSlash className='absolute right-3 top-4 text-5xl' />
+                                : <FaEye className='absolute right-3 top-4 text-5xl' />
                         }
                     </span>
                     {
                         errors.confirmPassword && <span className='text-red-600 text-xl mt-2 text-center'>{errors.confirmPassword}</span>
                     }
-                    <FaLock  className='absolute left-3 top-4 text-gray-500 text-5xl' />
+                    <FaLock className='absolute left-3 top-4 text-gray-500 text-5xl' />
                 </div>
                 <button className='uppercase py-6'>Signup</button>
+                {submissionError && <span className='text-red-600 text-xl mt-[-1rem] text-center'>{submissionError}</span>}
+
             </form>
             <p className='text-center my-12 before:border-b before:border-b-gray-300 before:w-full after:border-b after:border-b-gray-300 after:w-full'>OR</p>
             <button className='flex gap-6 items-center justify-center py-6 w-full bg-transparent text-gray-800 hover:text-white border-2 border-gray-400 uppercase'>
-                <FcGoogle className='text-5xl'  />
+                <FcGoogle className='text-5xl' />
                 Signup With Google
             </button>
 

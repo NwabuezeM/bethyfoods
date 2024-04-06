@@ -15,7 +15,6 @@ function Others() {
             const othersData = await productData.filter(item => item.category === 'others');
             setOthers(othersData);
             setLoading(false);
-            console.log(othersData);
         } catch (error) {
             setLoading(false);
             setError(error);

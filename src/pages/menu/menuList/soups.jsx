@@ -19,7 +19,6 @@ function Soups() {
             const soups = productData.filter(soup => soup.category === 'soup');
             setSoups(soups);
             setLoading(false);
-            console.log(soups);
         } catch (error) {
             setLoading(false);
             setError(error);

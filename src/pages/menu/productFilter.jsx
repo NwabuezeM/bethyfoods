@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Slider from 'react-slider';
+import './styles.css';
 
-function ProductFilter() {
+const MIN = 500;
+const MAX = 4000;
+
+function ProductFilter({ startValue, endValue,  }) {
+    const [values, setValues] = useState([MIN, MAX]);
+
+    const handleSliderChange = (newValue) => {
+        setValues(newValue);
+    };
+
     const categories = ['Soups', 'Rice', 'Pepper Soup', 'Snacks', 'Drinks', 'Others'];
 
     const letters = Array.from({ length: 26 }, (_, i) => String.fromCharCode(65 + i));
@@ -16,24 +27,38 @@ function ProductFilter() {
                     </label>
                 ))}
             </div>
-            <div className="price">
+            <div className="price relative">
                 <div className='my-8 flex justify-between'>
                     <p className='font-bold'>PRICE (&#8358;)</p>
-                    <button>APPLY</button>
+                    <button onClick={filterByPrice}>APPLY</button>
                 </div>
-                <div className='relative'>
-                    <input
-                        type="range"
-                        min="20"
-                        max="100"
-                        value="50"
-                        className="slider z-50 top-0 w-full -mt-1 bg-gray-400"
-                    />
-                </div>
+                <Slider
+                    onChange={handleSliderChange}
+                    value={values}
+                    min={MIN}
+                    max={MAX}
+                    className='slider'
+                    thumbClassNameClassName='slider-handle'
+                    trackClassName='slider-track'
+                />
                 <div className="flex my-4 items-center gap-3">
-                    <input type="number" name="start" id="start" className='p-4 text-2xl rounded-lg outline-none border border-gray-400 w-36' />
+                    <input
+                        type="number"
+                        name="start"
+                        id="start"
+                        className='p-4 text-2xl rounded-lg outline-none border border-gray-400 w-36'
+                        value={startValue}
+                        onChange={(e) => startValue(parseInt(e.target.value))}
+                    />
                     <span>-</span>
-                    <input type="number" name="end" id="end" className='p-4 text-2xl rounded-lg outline-none border border-gray-400 w-36' />
+                    <input
+                        type="number"
+                        name="end"
+                        id="end"
+                        className='p-4 text-2xl rounded-lg outline-none border border-gray-400 w-36'
+                        value={endValue}
+                        onChange={(e) => endValue(parseInt(e.target.value))}
+                    />
                 </div>
             </div>
             <div>

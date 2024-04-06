@@ -21,7 +21,7 @@ function FeaturedDelicacies() {
           productData && productData.length ? 
           productData.map(product => product.featured ? <div key={product.id} className='grid lg:grid-cols-2 gap-0 lg:my-24 md:my-24 text-center'>
             <div className="product-info flex flex-col gap-4">
-              <Link to={'/details'}><h2 className='text-[#d89423] hover:text-cyan-500 hover:underline text-center lg:text-left md:text-left'>{product.title}</h2></Link>
+              <Link to={`/details/${product.id}`}><h2 className='text-[#d89423] hover:text-cyan-500 hover:underline text-center lg:text-left md:text-left'>{product.title}</h2></Link>
               <h4 className='flex gap-12 justify-center lg:justify-start md:justify-start lg:text-left md:text-left'>
                 <span className='line-through text-cyan-400 text-center lg:text-left md:text-left'>&#8358;{product.price + (product.price * 0.45)}</span>
               <span className='font-bold text-cyan-500 text-center lg:text-left md:text-left'>&#8358;{product.price}</span>
@@ -29,7 +29,7 @@ function FeaturedDelicacies() {
               <p className='px-4  lg:text-left md:text-left'>{product.description.length > 180 ? product.description.slice(0, 180).concat("...") : product.description}</p>
             </div>
             <div className="product-image mx-auto">
-              <Link to={'/details/:id'}>
+              <Link to={`/details/${product.id}`}>
               <img src={product.image} alt={product.title} className='h-auto md:h-[250px] lg:h-[250px] w-full p-8 lg:p-0 rounded-3xl' />
               </Link>
             </div>
