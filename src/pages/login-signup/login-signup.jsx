@@ -25,7 +25,7 @@ const [loading, setLoading] = useState(false);
         </div>
         {
           formToShow === 'signup' ?
-            <Signup />
+            <Signup setLoading={setLoading} />
             : <Login setLoading={setLoading} />
         }
       </div>

@@ -9,7 +9,7 @@ import { setUser } from '../../components/products/store/userSlice'
 import { useNavigate } from 'react-router-dom'
 
 
-function Signup() {
+function Signup({ setLoading }) {
     const dispatch = useDispatch()
     const navigate = useNavigate();
     const [submissionError, setSubmissionError] = useState('');
@@ -103,6 +103,7 @@ function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (formValidation()) {
+            setLoading(true);
             try {
                 const userCredential = await createUserWithEmailAndPassword(auth, inputData.email, inputData.password);
                 const user = userCredential.user;
@@ -113,8 +114,8 @@ function Signup() {
                     email: '',
                     password: '',
                 });
-    
-                // Create a new object with updated user data
+                setLoading(false)
+
                 const userData = {
                     fullName: inputData.fullName,
                     username: inputData.username,
@@ -122,9 +123,9 @@ function Signup() {
                     number: inputData.number,
                     Timestamp: serverTimestamp()
                 };
-    
+
                 await setDoc(doc(db, 'users', user.uid), userData);
-    
+
                 setInputData({
                     fullName: '',
                     username: '',
@@ -135,12 +136,15 @@ function Signup() {
                 });
             } catch (error) {
                 console.log(error);
+                setSubmissionError("An error occured, try again")
+                setLoading(false)
             }
         } else {
             console.log('Form has errors. Please fix them.');
+            setLoading(false)
         }
     };
-    
+
 
 
 

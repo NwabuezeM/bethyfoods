@@ -7,8 +7,8 @@ function FeaturedDelicacies() {
     <div>
       <div className="background">
         <div className="introduction flex flex-col justify- items-center py-36">
-        <h2 className='text-[#d89423] z-50 my-5'>Featured Delicacies</h2>
-        <h3 className='z-50 text-white my-5'>Fresh from the Kitchen</h3>
+        <h2 className='slideTopIn text-[#d89423] z-50 my-5'>Featured Delicacies</h2>
+        <h3 className='slideBottomIn z-50 text-white my-5'>Fresh from the Kitchen</h3>
         <div className="flex justify-center">
         <img src="https://websitedemos.net/bbq-restaurant-02/wp-content/uploads/sites/284/2018/10/divider-free-img-1.png" alt="img" className='z-50 my-5' />
       </div>

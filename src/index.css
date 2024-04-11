@@ -74,6 +74,32 @@ li {
   font-size: 1.6rem;
 }
 
+.animateTopIn {
+  animation: slideTopIn 0.5s ease;
+}
+
+.animateBottomIn {
+  animation: slideBottomIn 0.5s ease reverse;
+}
+
+@keyframes slideTopIn {
+  from {
+    transform: translateY(-200%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideBottomIn {
+  from {
+    transform: translateY(50%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
 @media only screen and (max-width: 992px) {
   html {
     font-size: 55%;

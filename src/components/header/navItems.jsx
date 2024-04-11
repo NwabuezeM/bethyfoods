@@ -4,7 +4,7 @@ export const navItems = [
         to: '/',
     },
     {
-        label: 'About Us',
+        label: 'About',
         to: '/about',
     },
     {
@@ -12,7 +12,7 @@ export const navItems = [
         to: '/menu',
     },
     {
-        label: 'My Favorites',
+        label: 'My Favourites',
         to: '/favourites',
     },,
     {
@@ -20,7 +20,7 @@ export const navItems = [
         to: '/reservation',
     },
     {
-        label: 'Contact Us',
+        label: 'Contact',
         to: '/contact',
     }
 ];

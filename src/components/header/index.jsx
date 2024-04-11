@@ -1,12 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import { navItems } from './navItems';
-import { FaUserCircle, FaShoppingCart, FaSearch, FaTimes } from 'react-icons/fa';
+import { FaUserCircle, FaShoppingCart, FaSearch, FaTimes, FaShoppingBag } from 'react-icons/fa';
 import { useState, useEffect, useRef } from 'react';
 import './styles.css';
 import { useSelector } from 'react-redux';
 
 function Header() {
-    const [loggedIn, setLoggedIn] = useState(true);
+    const [loggedIn, setLoggedIn] = useState(false);
     const [toggleSearchForm, setToggleSearchForm] = useState(false);
     const [hamburgerClicked, setHamburgerClicked] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -81,16 +81,18 @@ function Header() {
     };
 
     return (
-        <header className={`h-[80px] rounded-2xl flex flex-col justify-center px-4 fixed top-0 left-0 right-0 z-[999] ${isScrolled ? 'bg-yellow-900' : 'bg-transparent'}`}>
+        <header className={`h-[80px] flex flex-col justify-center rounded-2xl p-6 fixed top-0 left-0 right-0 z-[999] ${isScrolled ? 'bg-yellow-900' : 'bg-transparent'}`}>
             <nav ref={navRef} className='flex justify-between items-center'>
                 <div className="site-logo">
+                    <NavLink to={'/'}>
                     <h1 className='text-4xl lg:text-6xl text-white'>BethyFoods</h1>
+                    </NavLink>
                 </div>
                 <ul className={`menu ${hamburgerClicked ? 'show-menu' : 'hide-menu'}`}>
                     {navItems.map(item => renderNavItem(item))}
                 </ul>
                 <div className="icons flex gap-6 lg:gap-8 items-center text-white" onClick={() => setHamburgerClicked(!hamburgerClicked)}>
-                    <div className={`hamburger ${hamburgerClicked ? 'active' : ''}`}>
+                    <div className={`hamburger pt-3 ${hamburgerClicked ? 'active' : ''}`}>
                         <span className="bar"></span>
                         <span className="bar"></span>
                         <span className="bar"></span>
@@ -101,10 +103,10 @@ function Header() {
                         </li>
                         <li>
                             <NavLink to={'/cart'} className='relative hover:text-white'><FaShoppingCart className='icon' />
-                            {
-                                cart.length ? <span className='cart-quantity bg-red-500 rounded-full hover:text-white p-5 w-5 h-5 absolute top-[-1.5rem] right-[-1rem] flex items-center justify-center'>{cart.length}</span>
-                                : null
-                            }
+                                {
+                                    cart.length ? <span className='cart-quantity h-fit w-fit bg-red-600 rounded-full py-1 px-2 text-white text-xl font-bold absolute top-[-1.5rem] md:top-[-1rem] lg:top-[-1rem] right-0.5'>{cart.length}</span>
+                                        : null
+                                }
                             </NavLink>
                         </li>
                         <li>

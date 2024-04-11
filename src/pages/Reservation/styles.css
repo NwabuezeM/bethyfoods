@@ -7,3 +7,10 @@
     border-bottom-right-radius: 50% 150px;
     padding-bottom: 50px;
 }
+
+@media only screen and (max-width: 768px) {
+    .reservation-hero {
+        border-bottom-left-radius: 50% 50px;
+        border-bottom-right-radius: 50% 50px;
+    }
+}

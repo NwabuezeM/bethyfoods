@@ -5,7 +5,7 @@
     background-attachment: fixed;
     border-bottom-left-radius: 50% 150px;
     border-bottom-right-radius: 50% 150px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 .background {
@@ -21,10 +21,7 @@
     background-position: center center;
     background-attachment: fixed;
 }
-
-
-
-
+  
 @media only screen and (max-width: 768px) {
     .hero {
         border-bottom-left-radius: 50% 100px;
@@ -37,6 +34,6 @@
     .hero {
         border-bottom-left-radius: 50% 50px;
         border-bottom-right-radius: 50% 50px;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 }

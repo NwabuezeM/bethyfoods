@@ -48,12 +48,7 @@ function ProductCard({ product, generateStars }) {
             <div className="flex">
                 {generateStars(product.rating)}
             </div>
-            <p>
-                {product.description.length > 100 ? product.description.slice(0, 100) : product.description}
-                {product.description.length > 100 && <span className="text-blue-600 font-bold text-4xl ml-1">
-                    <Link to={`/details/${product.id}`} onClick={handleProductClick} className="text-blue-600 font-bold text-4xl">...</Link>
-                </span>}
-            </p>
+            
             <p>
                 {product.featured && <span className="font-normal line-through mr-12">&#8358;{product.price + (product.price * 0.45)}</span>}
                 <span>&#8358;{product.price}</span>

@@ -64,8 +64,8 @@ function ProductDetails() {
             <span>&#8358;{price}</span>
           </p>
           <div className="buttons flex gap-8">
-            <button onClick={handleAddToCart} className="bg-green-600 py-6 flex uppercase"><FaShoppingCart size={18} className="mr-8" /><span>Add To Cart</span></button>
-            <button className="py-6 flex uppercase" onClick={handleAddToFavourite}><FaHeart size={18} className="mr-8" /><span>Add To Favourites</span></button>
+            <button onClick={handleAddToCart} className="bg-green-600 py-6 flex uppercase"><FaShoppingCart size={18} className="mr-8 hidden md:block lg:block" /><span>Add To Cart</span></button>
+            <button className="py-6 flex uppercase" onClick={handleAddToFavourite}><FaHeart size={18} className="mr-8 hidden md:block lg:block" /><span>Add To Favourites</span></button>
           </div>
           <p>{description}</p>
         </div>
