@@ -104,7 +104,7 @@ function Header() {
                         <li>
                             <NavLink to={'/cart'} className='relative hover:text-white'><FaShoppingCart className='icon' />
                                 {
-                                    cart.length ? <span className='cart-quantity h-fit w-fit bg-red-600 rounded-full py-1 px-2 text-white text-xl font-bold absolute top-[-1.5rem] md:top-[-1rem] lg:top-[-1rem] right-0.5'>{cart.length}</span>
+                                    cart.length ? <span className='cart-quantity h-fit w-fit bg-red-600 rounded-full py-1 px-2 text-white text-xl font-bold absolute top-[-1.5rem] md:top-[-1rem] lg:top-[-1rem] right-[-1rem]'>{cart.length}</span>
                                         : null
                                 }
                             </NavLink>
