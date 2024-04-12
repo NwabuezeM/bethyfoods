@@ -20,6 +20,11 @@
     background-color: rgb(229, 231, 235);
 }
 
+.price-filter-btn-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .category-btn {
     color: rgb(55, 65, 81);
     background-color: rgb(229, 231, 235);
@@ -49,7 +54,7 @@
         grid-template-columns: 1fr;
     }
 
-    .category-btn-container {
+    .category-btn-container, .price-filter-btn-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -64,7 +69,7 @@
         transition:  all 0.3s ease;
     }
 
-    .show-category-btn-container {
+    .show-category-btn-container, .show-price-filter-btn-container {
         top: 0;
     }
 

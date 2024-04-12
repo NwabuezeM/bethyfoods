@@ -1,4 +1,5 @@
 import { FaTimes } from "react-icons/fa";
+import './styles.css'
 
 function Sidebar({ query, handleSearchChange, handlePriceInput, priceFilterButtonClick, isMobile, setPriceFilterButtonClick }) {
 
@@ -39,7 +40,7 @@ function Sidebar({ query, handleSearchChange, handlePriceInput, priceFilterButto
 
 
     return (
-        <div className="flex flex-col px-8">
+        <div className="flex flex-col lg:px-8">
             <div className={`relative pt-8 pb-20`}>
                 <input
                     type="text"
@@ -52,11 +53,11 @@ function Sidebar({ query, handleSearchChange, handlePriceInput, priceFilterButto
 
             </div>
 
-            <div className={`price flex flex-col gap-8 ${isMobile && ` justify-center items-center pt-12 z-[9999] fixed ${priceFilterButtonClick ? 'top-0' : 'top-[-150%]'} h-screen w-full bg-black/75 backdrop-blur text-white z-50 transition-all delay-150`}`}>
+            <div className={`price-filter-btn-container ${priceFilterButtonClick && 'show-price-filter-btn-container'}`}>
                 <FaTimes
                 onClick={()=> setPriceFilterButtonClick(false)} 
                 className="absolute top-16 right-16 text-5xl text-orange-800 lg:hidden" />
-                <label htmlFor="" className="input-container text-3xl mb-6">
+                <label htmlFor="" className="input-container text-3xl mb-6 text-white lg:text-gray-400">
                     <input
                         type="radio"
                         name="price"
@@ -67,7 +68,7 @@ function Sidebar({ query, handleSearchChange, handlePriceInput, priceFilterButto
                 </label>
 
                 {priceRange.map((range, index) => (
-                    <label key={index} htmlFor={`price${index}`} className="input-container text-3xl mb-6">
+                    <label key={index} htmlFor={`price${index}`} className="input-container text-3xl mb-6 text-white lg:text-gray-700">
                         <input
                             type="radio"
                             name={`price`}
