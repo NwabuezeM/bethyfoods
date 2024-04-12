@@ -16,7 +16,9 @@ function SearchResultPage({ searchQuery }) {
 
   const updateSearchResults = (query) => {
     const filteredResults = productsData.filter((product) =>
-      product.title.toLowerCase().includes(query.toLowerCase())
+      product.title.toLowerCase().includes(query.toLowerCase()) ||
+      product.description.toLowerCase().includes(query.toLowerCase()) ||
+      product.category.toLowerCase().includes(query.toLowerCase())
     );
     setSearchResults(filteredResults);
   };
@@ -27,7 +29,7 @@ function SearchResultPage({ searchQuery }) {
         <>
           {searchResults.length > 0 ? (
             <>
-              <h1 className="text-white mb-12">Search Results for "{searchQuery}"</h1>
+              <h1 className="text-white text-5xl mb-12">Search Results for "{searchQuery}"</h1>
               <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
                 {searchResults.map((product) => (
                   <ProductCard key={product.id} product={product} />
@@ -37,8 +39,8 @@ function SearchResultPage({ searchQuery }) {
           ) : (
             <h1 className="text-white">No result found for "{searchQuery}"</h1>
           )}
-          <button className="mt-14" onClick={() => navigate("/")}>
-            Back to Home
+          <button className="mt-14" onClick={() => navigate(-1)}>
+            Go Back
           </button>
         </>
       )}
