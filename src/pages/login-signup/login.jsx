@@ -1,4 +1,3 @@
-// Login.js
 import { useState, useEffect } from 'react';
 import { FcGoogle } from 'react-icons/fc';
 import { FaEnvelope, FaEye, FaEyeSlash, FaLock, FaFacebook } from 'react-icons/fa';
@@ -137,7 +136,7 @@ function Login({ setLoading }) {
                 </div>
                 <button type="submit" className='uppercase py-6'>Login</button>
                 {submissionError && <span className='text-red-600 text-xl mt-[-1rem] text-center'>{submissionError}</span>}
-                <Link to={'/reset-password'} className='text-blue-600 text-center hover:underline'>Forgot Password?</Link>
+                <Link to={'/password-reset'} className='text-blue-600 text-center hover:underline'>Forgot Password?</Link>
 
             </form>
             <p className='text-center my-12 before:border-b before:border-b-gray-300 before:w-full after:border-b after:border-b-gray-300 after:w-full'>OR</p>

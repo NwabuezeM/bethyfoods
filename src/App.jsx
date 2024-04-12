@@ -1,6 +1,5 @@
 import { Route, Routes, useLocation, Link } from 'react-router-dom';
 import { useEffect } from 'react';
-import './App.css';
 import Home from './pages/home/home';
 import About from './pages/about/about';
 import Contact from './pages/contact/contact';
@@ -16,9 +15,9 @@ import ChefApplicant from './pages/chef applicants/chefApplicants';
 import Reservation from './pages/Reservation/reservation';
 import Menu from './pages/menu/menu';
 import Profile from './pages/profile/profile';
-import ResetPassword from './pages/login-signup/resetPassword';
 import { selectUsers } from './components/products/store/userSlice';
 import { useSelector } from 'react-redux';
+import PasswordResetPage from './pages/login-signup/passwordReset';
 
 function App() {
   const location = useLocation();
@@ -37,7 +36,7 @@ function App() {
       case '/favourites': return 'Favourites | Bethyfoods Delicacy';
       case '/cart': return 'Cart | Bethyfoods Delicacy';
       case '/login-signup': return 'Login/Signup | Bethyfoods Delicacy';
-      case '/reset-password': return 'Password Reset | Bethyfoods Delicacy';
+      case '/password-reset': return 'Password Reset | Bethyfoods Delicacy';
       case '/profile': return 'My Profile | Bethyfoods Delicacy';
       case '/privacy-policy': return 'Privacy Policy | Bethyfoods Delicacy';
       case '/terms-and-conditions': return 'Terms of Service | Bethyfoods Delicacy';
@@ -59,7 +58,7 @@ function App() {
         <Route path='/cart' element={<Cart />} />
         <Route path='/favourites' element={<Favourites />} />
         <Route path='/login-signup' element={<LoginSignup />} />
-        <Route path='/reset-password' element={<ResetPassword />} />
+        <Route path='/password-reset' element={<PasswordResetPage />} />
         <Route path='/privacy-policy' element={<PrivacyPolicy />} />
         <Route path='/details/:id' element={<ProductDetails />} />
         <Route path='/terms-and-conditions' element={<TermsOfService />} />

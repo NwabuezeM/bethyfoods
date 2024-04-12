@@ -18,7 +18,7 @@ function AboutImageSlider() {
     };
 
     return (
-        <div className="slider-container my-24">
+        <div className="slider-container my-24 w-[95%]">
             <Slider {...settings}>
                 {
                     images.map((image, index) => (

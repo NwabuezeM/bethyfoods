@@ -55,14 +55,14 @@ function Chefs() {
                 <p>Are you a professional and certified chef? Apply now to join our team of kitchen experts.</p>
                 <Link to={'/chef-applicant'} className="bg-[#d89423] hover:bg-[#ff6347] text-white text-center py-5 px-7 rounded-full uppercase hover:text-white block w-fit mx-auto lg:mx-0 mt-5">Apply Now</Link>
                 <div className="my-24 text-center">
-                    <img src="https://media.istockphoto.com/id/1389857295/photo/african-american-woman-bakers-looking-at-camera-chef-baker-in-a-chef-dress-and-hat-cooking.jpg?s=612x612&w=0&k=20&c=a6DaEjGakfhEykibC5LA1eknE7752wpQQdUUt9VjhRc=" alt="Bethel Chigozie" className="rounded-full object-cover h-[300px] w-[300px] lg:h-[500px] lg:w-[500px] mb-12 mx-auto lg:mx-0" />
+                    <img src="https://media.istockphoto.com/id/1389857295/photo/african-american-woman-bakers-looking-at-camera-chef-baker-in-a-chef-dress-and-hat-cooking.jpg?s=612x612&w=0&k=20&c=a6DaEjGakfhEykibC5LA1eknE7752wpQQdUUt9VjhRc=" alt="Bethel Chigozie" className="rounded-full object-cover h-[150px] w-[150px] lg:h-[500px] lg:w-[500px] mb-12 mx-auto lg:mx-0" />
                     <h3>Bethel Chigozie</h3>
                     <p>Founder / Chief Chef</p>
                 </div>
             </div>
             <div className="chefs grid lg:grid-cols-2 gap-12 justify-center">
                 {
-                    chefs.map((chef, index)=> <div key={index} className="text-center">
+                    chefs.map((chef, index) => <div key={index} className="text-center">
                         <img src={chef.image} alt={chef.name} className="h-[150px] w-[150px] rounded-full object-cover mx-auto" />
                         <h3>{chef.name}</h3>
                         <p>{chef.position}</p>

@@ -12,7 +12,7 @@ function WordsAboutUs() {
                 <p>
                     At our esteemed restaurant, we go beyond just food, we offer a complete dining experience. Alongside our delectable dishes, we provide a range of soft drinks to ensure optimum refreshment with every meal. Additionally, every Friday, we host Happy Hours across all our branches, where you can indulge in special deals and discounts. To secure your spot for Happy Hour, simply <Link to={'/happy-hour-seat-reservation'} className='text-blue-600 hover:underline'>reserve a seat online</Link> and join us for an unforgettable time of great food and good vibes.
                 </p>
-                <Link to={'/menu'} className="bg-[#d89423] hover:bg-[#ff6347] text-white py-5 px-7 rounded-full uppercase hover:text-white block w-1/3 mx-auto lg:mx-0">View Our Menu</Link>
+                <Link to={'/menu'} className="bg-[#d89423] hover:bg-[#ff6347] text-white py-5 px-7 rounded-full uppercase hover:text-white block w-fit mx-auto lg:mx-0">View Our Menu</Link>
             </div>
 
             <div className="image">

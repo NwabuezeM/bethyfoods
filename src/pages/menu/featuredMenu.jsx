@@ -42,7 +42,7 @@ function FeaturedMenu() {
   };
 
   return (
-    <div className="slider-container py-36 px-8 lg:px-36">
+    <div className="slider-container py-36 px-8 lg:px-36 w-[95%]">
       <Slider {...settings}>
         {featuredProducts.map(product => (
           <div key={product.id} className="px-6">

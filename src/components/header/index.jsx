@@ -91,8 +91,10 @@ function Header() {
                 <ul className={`menu ${hamburgerClicked ? 'show-menu' : 'hide-menu'}`}>
                     {navItems.map(item => renderNavItem(item))}
                 </ul>
-                <div className="icons flex gap-6 lg:gap-8 items-center text-white" onClick={() => setHamburgerClicked(!hamburgerClicked)}>
-                    <div className={`hamburger pt-3 ${hamburgerClicked ? 'active' : ''}`}>
+                <div className="icons flex gap-6 lg:gap-8 items-center text-white">
+                    <div
+                     onClick={() => setHamburgerClicked(!hamburgerClicked)}
+                     className={`hamburger pt-3 ${hamburgerClicked ? 'active' : ''}`}>
                         <span className="bar"></span>
                         <span className="bar"></span>
                         <span className="bar"></span>

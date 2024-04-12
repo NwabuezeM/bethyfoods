@@ -18,7 +18,7 @@ function About() {
       <section>
         <AboutHeroSection />
       </section>
-      <section>
+      <section className="max-w-[95%]">
         <OurRestaurantSection />
       </section>
       <section>
