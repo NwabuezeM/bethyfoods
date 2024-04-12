@@ -1,15 +1,19 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { navItems } from './navItems';
 import { FaUserCircle, FaShoppingCart, FaSearch, FaTimes, FaShoppingBag } from 'react-icons/fa';
 import { useState, useEffect, useRef } from 'react';
 import './styles.css';
 import { useSelector } from 'react-redux';
 
-function Header() {
+function Header({ searchQuery, handleSearchInputChange }) {
     const [loggedIn, setLoggedIn] = useState(false);
     const [toggleSearchForm, setToggleSearchForm] = useState(false);
     const [hamburgerClicked, setHamburgerClicked] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [searchError, setSearchError] = useState("");
+
+
+    const navigate = useNavigate();
 
     const { cart } = useSelector(state => state)
 
@@ -57,6 +61,17 @@ function Header() {
         };
     }, []);
 
+    function handleFormSubmit(e) {
+        e.preventDefault();
+        if (searchQuery.length > 0) {
+            setToggleSearchForm(false);
+            setSearchError("")
+            navigate(`/search?query=${encodeURIComponent(searchQuery)}`);
+        } else {
+            setSearchError("Please enter a search term");
+        }
+    }
+
     const renderNavItem = (item) => {
         if (item.children) {
             return (
@@ -85,7 +100,7 @@ function Header() {
             <nav ref={navRef} className='flex justify-between items-center'>
                 <div className="site-logo">
                     <NavLink to={'/'}>
-                    <h1 className='text-4xl lg:text-6xl text-white'>BethyFoods</h1>
+                        <h1 className='text-4xl lg:text-6xl text-white'>BethyFoods</h1>
                     </NavLink>
                 </div>
                 <ul className={`menu ${hamburgerClicked ? 'show-menu' : 'hide-menu'}`}>
@@ -93,8 +108,8 @@ function Header() {
                 </ul>
                 <div className="icons flex gap-6 lg:gap-8 items-center text-white">
                     <div
-                     onClick={() => setHamburgerClicked(!hamburgerClicked)}
-                     className={`hamburger pt-3 ${hamburgerClicked ? 'active' : ''}`}>
+                        onClick={() => setHamburgerClicked(!hamburgerClicked)}
+                        className={`hamburger pt-3 ${hamburgerClicked ? 'active' : ''}`}>
                         <span className="bar"></span>
                         <span className="bar"></span>
                         <span className="bar"></span>
@@ -124,15 +139,22 @@ function Header() {
 
             </nav>
 
-            <form className={`search-form w-full h-screen fixed top-0 left-1/2 translate-x-[-50%] flex items-center justify-center backdrop-blur-sm z-50 ${toggleSearchForm ? '' : 'translate-y-[-150%]'}`}>
+            <form
+                onSubmit={handleFormSubmit}
+                className={`search-form w-full h-screen fixed top-0 left-1/2 translate-x-[-50%] flex items-center justify-center backdrop-blur-sm z-50 ${toggleSearchForm ? '' : 'translate-y-[-150%]'}`}>
 
                 <FaTimes size={40} className='bg-transparent hover:bg-transparent absolute top-20 right-12 text-orange-400 cursor-pointer'
                     onClick={handleCloseIconClick} />
 
                 <div className="relative w-full flex justify-center flex-col items-center">
-                    <input type="text" name='query' placeholder='Search...' className='bg-transparent outline-none  border-b-4 border-b-white w-1/3 text-5xl text-white placeholder:text-white focus:bg-transparent' />
-                    <button className='bg-transparent hover:bg-transparent absolute left-[65%]'><FaSearch size={24} /></button>
-
+                    <input type="text"
+                        name='query'
+                        value={searchQuery}
+                        onChange={handleSearchInputChange}
+                        placeholder='Search...'
+                        className='bg-transparent outline-none  border-b-4 border-b-white w-1/3 text-5xl text-white placeholder:text-white focus:bg-transparent' />
+                    <button type='submit' className='bg-transparent hover:bg-transparent absolute left-[65%]'><FaSearch size={24} /></button>
+                    {searchError && <span className='text-red-400 text-3xl mt-2 text-center'>{searchError}</span>}
                 </div>
             </form>
         </header>

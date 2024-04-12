@@ -1,5 +1,5 @@
 import { Route, Routes, useLocation, Link } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Home from './pages/home/home';
 import About from './pages/about/about';
 import Contact from './pages/contact/contact';
@@ -18,8 +18,17 @@ import Profile from './pages/profile/profile';
 import { selectUsers } from './components/products/store/userSlice';
 import { useSelector } from 'react-redux';
 import PasswordResetPage from './pages/login-signup/passwordReset';
+import SearchResultPage from './pages/searchResult/searchResult';
 
 function App() {
+
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearchInputChange = (event) => {
+    const query = event.target.value.trim();
+    setSearchQuery(query);
+  };
+
   const location = useLocation();
   const user = useSelector(selectUsers);
 
@@ -48,7 +57,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header searchQuery={searchQuery} handleSearchInputChange={handleSearchInputChange} />
 
       <Routes>
         <Route path='/' element={<Home />} />
@@ -64,6 +73,7 @@ function App() {
         <Route path='/terms-and-conditions' element={<TermsOfService />} />
         <Route path='/reservation' element={<Reservation />} />
         <Route path='/chef-applicant' element={<ChefApplicant />} />
+        <Route path='/search' element={<SearchResultPage searchQuery={searchQuery} />} />
         {user.currentUser ? (
           <Route path='/profile' element={<Profile />} />
         ) : (
