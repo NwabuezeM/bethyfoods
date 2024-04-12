@@ -152,8 +152,8 @@ function Header({ searchQuery, handleSearchInputChange }) {
                         value={searchQuery}
                         onChange={handleSearchInputChange}
                         placeholder='Search...'
-                        className='bg-transparent outline-none  border-b-4 border-b-white w-1/3 text-5xl text-white placeholder:text-white focus:bg-transparent' />
-                    <button type='submit' className='bg-transparent hover:bg-transparent absolute left-[65%]'><FaSearch size={24} /></button>
+                        className='bg-transparent outline-none  border-b-4 border-b-white w-3/4 lg:w-1/3 text-5xl text-white placeholder:text-white focus:bg-transparent' />
+                    <button type='submit' className='bg-transparent hover:bg-transparent absolute left-[80%] lg:left-[65%]'><FaSearch size={24} /></button>
                     {searchError && <span className='text-red-400 text-3xl mt-2 text-center'>{searchError}</span>}
                 </div>
             </form>

@@ -39,8 +39,7 @@ function ProductCard({ product, generateStars }) {
     return (
         <div key={product.id} className="product-card flex flex-col gap-2 bg-white shadow-md shadow-black justify-center relative px-4 rounded-2xl py-3">
             <Link to={`/details/${product.id}`} onClick={handleProductClick}>
-                <img src={product.image} alt={product.title}
-                loading="lazy" 
+                <img src={product.image} alt={product.title} 
                 className="lg:h-[150px] lg:w-[150px] object-cover rounded-2xl mx-auto" />
                 <h3 className="text-cyan-700 hover:underline">{product.title}</h3>
 
